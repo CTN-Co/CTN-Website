@@ -3,74 +3,111 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>CTN Trading Co.</title>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap">
+  <title>CTN Trading Co. | MangaJo Juices</title>
   <style>
     body {
-      font-family: 'Inter', sans-serif;
+      font-family: sans-serif;
       margin: 0;
       padding: 0;
-      background-color: #f9f9f9;
+      background-color: #f4f4f4;
       color: #333;
     }
     header {
-      background-color: #fff;
-      padding: 20px;
-      display: flex;
-      justify-content: center;
-      border-bottom: 1px solid #eee;
+      background-color: #c2272d; /* pulled from your logo */
+      color: white;
+      text-align: center;
+      padding: 2rem 1rem;
     }
-    header img {
-      max-height: 80px;
+    .products {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1.5rem;
+      padding: 2rem;
     }
-    section {
-      max-width: 900px;
-      margin: 40px auto;
-      padding: 0 20px;
+    .product {
+      background: white;
+      padding: 1rem;
+      border-radius: 12px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      text-align: center;
     }
-    h1, h2 {
-      color: #00704A;
+    .product img {
+      max-width: 100%;
+      height: 180px;
+      object-fit: cover;
+      border-radius: 8px;
     }
-    .section {
-      margin-bottom: 40px;
+    .order-form {
+      background-color: white;
+      margin: 2rem;
+      padding: 2rem;
+      border-radius: 12px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+    input, select, textarea, button {
+      width: 100%;
+      margin-bottom: 1rem;
+      padding: 0.8rem;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+    }
+    button {
+      background-color: #c2272d;
+      color: white;
+      font-weight: bold;
+      cursor: pointer;
+      border: none;
     }
     footer {
-      background-color: #f0f0f0;
-      padding: 20px;
       text-align: center;
-      font-size: 14px;
+      padding: 1rem;
+      background: #eee;
+      font-size: 0.9rem;
     }
   </style>
 </head>
 <body>
   <header>
-    <img src="CTN Full.svg" alt="CTN Trading Co. Logo" />
+    <h1>CTN Trading Co.</h1>
+    <p>Refreshing wellness in every bottle</p>
   </header>
 
-  <section class="section" id="about">
-    <h1>Welcome to CTN Trading Co.</h1>
-    <p>
-      CTN Trading Co. was founded in 2025 with the goal of bringing unique and high-quality food and beverage products to the Jordanian market.
-    </p>
-    <p>
-      Based in Amman, CTN is a young and growing company with a clear vision: to introduce innovative, health-focused products that meet the changing tastes and needs of local consumers. We currently focus on introducing select international brands to the Jordanian market.
-    </p>
+  <section class="products">
+    <div class="product">
+      <img src="https://cdn.shopify.com/s/files/1/0086/0795/7054/products/MangaJoGreenTeaPomegranate_800x.jpg" alt="Green Tea & Pomegranate">
+      <h3>Green Tea & Pomegranate</h3>
+      <p>JD 1.50</p>
+    </div>
+    <div class="product">
+      <img src="https://cdn.shopify.com/s/files/1/0086/0795/7054/products/MangaJoGojiBerryGreenTea_800x.jpg" alt="Goji Berry Green Tea">
+      <h3>Goji Berry Green Tea</h3>
+      <p>JD 1.50</p>
+    </div>
+    <div class="product">
+      <img src="https://cdn.shopify.com/s/files/1/0086/0795/7054/products/MangaJoLemonGreenTea_800x.jpg" alt="Lemon Green Tea">
+      <h3>Lemon Green Tea</h3>
+      <p>JD 1.50</p>
+    </div>
   </section>
 
-  <section class="section" id="products">
-    <h2>Our Products</h2>
-    <p>We’re currently working on bringing a fresh range of imported juices, natural snacks, and more. Stay tuned!</p>
-  </section>
-
-  <section class="section" id="contact">
-    <h2>Contact Us</h2>
-    <p>Email: <a href="mailto:Laith@ctntradingco.com">Laith@ctntradingco.com</a></p>
-<p>Email: <a href="mailto:Karam@ctntradingco.com">Karam@ctntradingco.com</a></p>
-    <p>Location: Amman, Jordan</p>
+  <section class="order-form">
+    <h2>Place Your Order</h2>
+    <form action="https://formsubmit.io/send/laith@ctntradingco.com,karam@ctntradingco.com,seif@ctntradingco.com,eliane@ctntradingco.com" method="POST">
+      <input type="text" name="name" placeholder="Your Name" required>
+      <input type="tel" name="phone" placeholder="Phone Number" required>
+      <input type="text" name="address" placeholder="Delivery Address" required>
+      <select name="product" required>
+        <option value="Green Tea & Pomegranate">Green Tea & Pomegranate</option>
+        <option value="Goji Berry Green Tea">Goji Berry Green Tea</option>
+        <option value="Lemon Green Tea">Lemon Green Tea</option>
+      </select>
+      <textarea name="notes" placeholder="Delivery Notes (optional)"></textarea>
+      <button type="submit">Submit Order</button>
+    </form>
   </section>
 
   <footer>
-    &copy; 2025 CTN Trading Co. All rights reserved.
+    &copy; 2025 CTN Trading Co. | Instagram: @ctntradingco
   </footer>
 </body>
 </html>
